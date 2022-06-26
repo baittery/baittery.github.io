@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>b(Ai)ttery ⤑ go</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>b(Ai)ttery ⤑ go</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-1">&#x00a7;</a>
+              </div>
+              <p><span id="forkongithub"><a href="https://github.com/timm/shortr#shortrlua--less-but-better-xai-eyes">Fork me on GitHub</a></span>
+<img align=left width=225   src="bat2.png"></p>
+<p>LUA is a “batteries-not-included” language.
+But LUA makes it easy to add in the  missing bits.
+E.g. here are some “b(Ai)tteries” for XAI.</p>
+<p>(c) 2022, Tim Menzies<br><a href="mailto:&#116;&#x69;&#109;&#x6d;&#x40;&#x69;&#x65;&#x65;&#x65;&#x2e;&#x6f;&#114;&#103;">&#116;&#x69;&#109;&#x6d;&#x40;&#x69;&#x65;&#x65;&#x65;&#x2e;&#x6f;&#114;&#103;</a></p>
+<p><strong>config:</strong> <a href="all.html">all</a></p>
+<p><strong>build:</strong> <a href="https://github.com/timm/shortr/blob/master/etc/src/Makefile">Makefile</a><br>(just used for the doco)</p>
+<p><strong>demos:</strong> <a href="go.html">go</a></p>
+<p><strong>apps:</strong> <a href="nb.html">nb</a></p>
+<p><strong>functions:</strong> <a href="lib.html">lib</a></p>
+<p><strong>klasses:</strong> <a href="bin.html">bin</a>
+:: <a href="cols.html">cols</a>
+:: <a href="num.html">num</a>
+:: <a href="row.html">row</a>
+:: <a href="rows.html">rows</a>
+:: <a href="some.html">some</a>
+:: <a href="sym.html">sym</a></p>
+<p><a href="https://zenodo.org/badge/latestdoi/206205826"> <img  src="https://zenodo.org/badge/206205826.svg" alt="DOI"></a> 
+<a href="https://opensource.org/licenses/BSD-2-Clause"><img  src="https://img.shields.io/badge/License-BSD%202--Clause-orange.svg"></a></p>
+<h2 id="test-suite">Test suite.</h2>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">local</span> all = <span class="hljs-built_in">require</span><span class="hljs-string">&quot;all&quot;</span>
+<span class="hljs-keyword">local</span> chat,cli,csv,maps,on = all.chat, all.cli, all.csv, all.maps, all.on
+<span class="hljs-keyword">local</span> settings,<span class="hljs-built_in">sort</span>,the    = all.settings, all.<span class="hljs-built_in">sort</span>, all.the
+
+<span class="hljs-keyword">local</span> COLS,NUM, ROWS = <span class="hljs-built_in">require</span><span class="hljs-string">&quot;COLS&quot;</span>, <span class="hljs-built_in">require</span><span class="hljs-string">&quot;NUM&quot;</span>, <span class="hljs-built_in">require</span><span class="hljs-string">&quot;ROWS&quot;</span>
+<span class="hljs-keyword">local</span> SOME, SYM      = <span class="hljs-built_in">require</span><span class="hljs-string">&quot;SOME&quot;</span>, <span class="hljs-built_in">require</span><span class="hljs-string">&quot;SYM&quot;</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-2">&#x00a7;</a>
+              </div>
+              <p>To disable a test, rename it from <code>go</code> to <code>no</code>.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">local</span> go,no = {},{}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-3">&#x00a7;</a>
+              </div>
+              <p>Print <code>the</code>.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.THE</span><span class="hljs-params">()</span></span> chat(the); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-4">&#x00a7;</a>
+              </div>
+              <p>Sort some numbers.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.SORT</span><span class="hljs-params">()</span></span> chat(<span class="hljs-built_in">sort</span>{<span class="hljs-number">10</span>,<span class="hljs-number">5</span>,<span class="hljs-number">1</span>,<span class="hljs-number">15</span>,<span class="hljs-number">0</span>}); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-5">&#x00a7;</a>
+              </div>
+              <p>Iterate over 2 lists</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.MAPS</span><span class="hljs-params">()</span></span> 
+  chat(maps({<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>},{<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,<span class="hljs-number">30</span>}, 
+       <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(x,y)</span></span> <span class="hljs-keyword">return</span> x+y <span class="hljs-keyword">end</span>)); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-6">&#x00a7;</a>
+              </div>
+              <p> Summarize stream of numbers</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.NUMS</span><span class="hljs-params">()</span></span> 
+  <span class="hljs-keyword">local</span> n=NUM(); <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span>,<span class="hljs-number">1000</span> <span class="hljs-keyword">do</span> n:add(i) <span class="hljs-keyword">end</span>; chat(n)
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-7">&#x00a7;</a>
+              </div>
+              <p>Keep a sample of 32 nums (out of 1000).</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.SOME</span><span class="hljs-params">()</span></span> 
+  <span class="hljs-keyword">local</span> s=SOME(<span class="hljs-number">32</span>); <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span>,<span class="hljs-number">1000</span> <span class="hljs-keyword">do</span> s:add(i) <span class="hljs-keyword">end</span>
+  chat(<span class="hljs-built_in">sort</span>(s.kept)); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-8">&#x00a7;</a>
+              </div>
+              <p> Summarize stream of symbols</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.SYM</span><span class="hljs-params">()</span></span> 
+  <span class="hljs-keyword">local</span> s=SYM()
+  <span class="hljs-keyword">for</span> i=<span class="hljs-number">1</span>,<span class="hljs-number">1000</span> <span class="hljs-keyword">do</span> <span class="hljs-keyword">for</span> _,c <span class="hljs-keyword">in</span> <span class="hljs-built_in">pairs</span>{<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>} <span class="hljs-keyword">do</span> s:add(c) <span class="hljs-keyword">end</span> <span class="hljs-keyword">end</span>
+  chat(<span class="hljs-built_in">sort</span>(s.kept)); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-9">&#x00a7;</a>
+              </div>
+              <p>Print CSV file.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.CSV</span><span class="hljs-params">()</span></span> csv(the.file, chat); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-10">&#x00a7;</a>
+              </div>
+              <p>Try initializing some columns from a list of names.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.COLS</span><span class="hljs-params">()</span></span> chat(COLS{<span class="hljs-string">&quot;aa&quot;</span>,<span class="hljs-string">&quot;Bb&quot;</span>,<span class="hljs-string">&quot;Cc-&quot;</span>}.x); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-11">&#x00a7;</a>
+              </div>
+              <p>Load data from a csv file to a ROWS object.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.ROWS</span><span class="hljs-params">( rs)</span></span> 
+  rs=ROWS():fill(the.file)
+  chat(rs.cols.x[<span class="hljs-number">1</span>])
+  chat(rs.cols.y); <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-12">&#x00a7;</a>
+              </div>
+              <p>Print klass names</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.KLASS</span><span class="hljs-params">()</span></span> 
+  <span class="hljs-keyword">local</span> file = <span class="hljs-string">&quot;../../data/diabetes.csv&quot;</span>
+  <span class="hljs-keyword">local</span> s=SYM()
+  <span class="hljs-keyword">for</span> _,row <span class="hljs-keyword">in</span> <span class="hljs-built_in">pairs</span>(ROWS():fill(file).rows) <span class="hljs-keyword">do</span> s:add(row:klass()) <span class="hljs-keyword">end</span>
+  chat(s.kept)
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span> <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-13">&#x00a7;</a>
+              </div>
+              <p>Load data from a csv file to a ROWS object.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">go.BETTERS</span><span class="hljs-params">( rs)</span></span> 
+  rs=ROWS():fill(the.file)
+  <span class="hljs-built_in">sort</span>(rs.rows) <span class="hljs-keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-14">&#x00a7;</a>
+              </div>
+              <hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="sswrap ">
+                <a class="ss" href="#section-15">&#x00a7;</a>
+              </div>
+              <h3 id="start">Start</h3>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>the = cli(the)
+on(the, go)</pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
